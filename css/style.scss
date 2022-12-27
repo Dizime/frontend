@@ -1,0 +1,127 @@
+@charset "UTF-8";
+@use "tailwindcss/base"; //@tailwind base;
+@use "tailwindcss/components"; //@tailwind components;
+@use "tailwindcss/utilities"; //@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Bevan&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+:root {
+  --font-primary: 'Source Sans Pro', 'Noto Sans JP', sans-serif;
+  --font-display: 'Bevan', cursive, 'Noto Sans JP', sans-serif;
+
+  --color-primary: #4a36ff;
+  --color-secondary: #6b6b6b;
+  --color-success: #00cc40;
+  --color-danger: #e82f2f;
+  --color-warning: #ebb800;
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-primary-disabled: #8578fa;
+  --color-secondary-disabled: #bdbdbd;
+  --color-success-disabled: #5fc980;
+  --color-danger-disabled: #eb6767;
+  --color-warning-disabled: #e8ca5d;
+
+  --saturation-factor: 1;
+}
+
+* {
+  font-family: var(--font-primary);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.bg-gradient-1 {
+  background: rgb(105,25,159);
+  background: linear-gradient(133deg, rgba(105,25,159,1) 0%, rgba(15,146,162,1) 50%, rgba(242,145,62,1) 100%);
+}
+.bg-gradient-2 {
+  background: rgb(2,0,36);
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,24,96,1) 100%);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+  &[disabled] {
+    background-color: var(--color-primary-disabled);
+  }
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+  &[disabled] {
+    background-color: var(--color-secondary-disabled);
+  }
+}
+.bg-success {
+  background-color: var(--color-success);
+  &[disabled] {
+    background-color: var(--color-success-disabled);
+  }
+}
+.bg-danger {
+  background-color: var(--color-danger);
+  &[disabled] {
+    background-color: var(--color-danger-disabled);
+  }
+}
+.bg-warning {
+  background-color: var(--color-warning);
+  &[disabled] {
+    background-color: var(--color-warning-disabled);
+  }
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-success {
+  color: var(--color-success);
+}
+.text-danger {
+  color: var(--color-danger);
+}
+.text-warning {
+  color: var(--color-warning);
+}
+
+.bg-dark-sidebar {
+  background-color: hsl(216, calc(var(--saturation-factor, 1) * 7.2%), 13.5%);
+}
+.bg-dark-sideicon {
+  background-color: #36393f;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.typing {
+  border-right: 0.08em solid #666;
+  font-weight: bold;
+};
+
+/*
+.w-112 {
+  width: 25rem;
+}
+.w-18 {
+  width: 4.5rem;
+}
+.h-128 {
+  height: 32rem;
+}
+.h-136 {
+  height: 36rem;
+}
+*/
