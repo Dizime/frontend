@@ -1,5 +1,5 @@
 import React, { StrictMode } from "react";
-import TransparentWhite from "../../../images/transparentwhite.webp";
+import TransparentWhite from "../assets/images/transparentwhite.webp";
 
 export default function AppApp() {
   return (
